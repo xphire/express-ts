@@ -1,0 +1,29 @@
+datasource db {
+  url      = env("MONGO_URI")
+  provider = "mongodb"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Grocery {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  name      String
+  available Boolean? @default(false)
+  price     Float
+  category  Category
+  quantity  Int
+  slug      String   @unique
+  code      String   @unique @default(cuid())
+}
+
+enum Category {
+  Beverages
+  Alcoholics
+  Toiletries
+  Laundry
+}
+
+
