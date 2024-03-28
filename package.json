@@ -26,12 +26,13 @@
   "scripts": {
     "develop": "ts-node-dev --respawn --transpile-only src/index.ts",
     "prisma": "npx prisma generate --schema=./src/model/schema.prisma",
+    "prisma:push" : "npx prisma db push --schema=./src/model/schema.prisma ",
     "seed": "ts-node-dev ./src/database/seeder.ts",
     "test": "jest",
     "coverage": "npx type-coverage --detail",
     "test:coverage": "jest --coverage",
     "start" : "node ./dist/index.js",
-    "build" : "yarn install && yarn prisma && tsc"
+    "build" : "yarn install && yarn prisma && yarn prisma:push && tsc"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",

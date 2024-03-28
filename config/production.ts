@@ -1,4 +1,4 @@
 export default{
     port : 9500,
-    mongoUri : "mongodb://localhost:27017/groceries"
+    mongoUri : process.env.MONGO_URI
 }
