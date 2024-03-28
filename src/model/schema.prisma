@@ -27,3 +27,9 @@ enum Category {
 }
 
 
+generator client {
+  ...
+  output = "../../node_modules/.prisma/client"
+  ...
+}
+
