@@ -31,7 +31,7 @@
     "coverage": "npx type-coverage --detail",
     "test:coverage": "jest --coverage",
     "start" : "node ./dist/index.js",
-    "build" : "yarn install && tsc"
+    "build" : "yarn install && yarn prisma && tsc"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",

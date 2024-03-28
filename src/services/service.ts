@@ -1,6 +1,6 @@
 //Services are methods we use to call the database
 
-import { Grocery, Prisma, PrismaClient } from "@prisma/client";
+import { Grocery, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient(
     {errorFormat: 'pretty'}
