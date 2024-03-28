@@ -4,7 +4,7 @@ import dbConnect from "./database/connect";
 
 import config from "config";
 
-const PORT = config.get("port");
+const PORT = config.get("port") || 9500;
 
 
 app.listen(PORT, async () => {
